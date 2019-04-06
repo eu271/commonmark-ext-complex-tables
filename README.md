@@ -7,10 +7,10 @@ Custom table extension for the proyect https://github.com/atlassian/commonmark-j
 -1, 1
 | A | B |
 -1, 3
-| a | b1 | b2 | b3 |
-| a | b1 | b2 | b3 |
-| a | b1 | b2 | b3 |
-| a | b1 | b2 | b3 |
+| *a* | b1 | b2 | b3 |
+| a   | b1 | b2 | b3 |
+| a   | b1 | b2 | b3 |
+| a   | b1 | b2 | b3 |
 -1, 3
 | a | b1 | b2 | b3 |
 -1, 3
@@ -26,7 +26,7 @@ Custom table extension for the proyect https://github.com/atlassian/commonmark-j
 <td colspan="6"></br>B</td>
 </tr>
 <tr>
-<td colspan="6"></br>a</br>a</br>a</br>a</td>
+<td colspan="6"></br><em>a</em></br>a</br>a</br>a</td>
 <td colspan="2"></br>b1</br>b1</br>b1</br>b1</td>
 <td colspan="2"></br>b2</br>b2</br>b2</br>b2</td>
 <td colspan="2"></br>b3</br>b3</br>b3</br>b3</td>
