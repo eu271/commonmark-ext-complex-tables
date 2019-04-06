@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eochoa</groupId>
+    <artifactId>commonmark-ext-complex-tables</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>0.12.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark-test-util</artifactId>
+            <version>0.12.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+
+        <testResources>
+            <testResource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xsd</include>
+                </includes>
+            </testResource>
+
+            <testResource>
+                <directory>src/test/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.md</include>
+                </includes>
+            </testResource>
+        </testResources>
+
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>espublico.integrations.platform.framework.app.VersionInfoService</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
